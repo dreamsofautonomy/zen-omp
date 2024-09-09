@@ -26,7 +26,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     background = 'transparent'
     template = """ \
 {{if not .Detached}}{{ .HEAD }}{{else}}@{{ printf "%.7s" .Commit.Sha }}{{end}}\
-{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>
+{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>\
 """
 
     [blocks.segments.properties]
